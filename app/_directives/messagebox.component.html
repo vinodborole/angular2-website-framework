@@ -1,0 +1,21 @@
+
+	<div *ngIf="message" [ngClass]="{ 'message-box animated fadeIn': message, 'message-box-success': message.type === 'success', 'message-box-warning': message.type === 'warning', 'message-box-info' : message.type === 'info', 'message-box-danger' : message.type === 'error'}" id="message-box-default">
+		<div class="mb-container">
+			<div class="mb-middle">
+				<div class="mb-title"><span *ngIf="message" [ngClass]="{ 'fa': message,'fa-globe': message.type === '', 'fa-check': message.type === 'success', 'fa-warning': message.type === 'warning', 'fa-info' : message.type === 'info', 'fa-times' : message.type === 'error', 'fa-sign-out': message.type ==='signout'}"></span>{{message.title}}</div>
+				<div class="mb-content">
+					<p>{{message.text}}</p>                    
+				</div>
+				<div class="mb-footer">
+					<button *ngIf="message.type==='success' || message.type==='error' || message.type==='warning'" (click)="close()" class="btn btn-default btn-lg pull-right mb-control-close">Close</button>
+					<div *ngIf="message.type==='signout'" class="pull-right">
+						<a href="#" [routerLink]="['/login']" class="btn btn-success btn-lg">Yes</a>
+						<button (click)="close()" class="btn btn-default btn-lg mb-control-close">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+
+

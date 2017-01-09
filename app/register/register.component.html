@@ -1,0 +1,59 @@
+        <div class="login-container">
+            <div class="login-box animated fadeInDown">
+                <div class="login-logo"></div>
+                <div class="login-body">
+                    <div class="login-title"><strong>Register</strong> to your account</div>
+                    <alert></alert>
+					<form class="form-horizontal" name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+					        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+		                        <div class="col-md-12">
+		                            <input type="text" class="form-control" placeholder="First Name" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required/>
+		                            <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
+		                        </div>
+					        </div>
+					        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+		                        <div class="col-md-12">
+		                            <input type="text" class="form-control" placeholder="Last Name" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required/>
+		                            <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+		                        </div>
+					        </div>
+					        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !occupation.valid }">
+		                        <div class="col-md-12">
+		                            <input type="text" class="form-control" placeholder="Occupation" name="occupation" [(ngModel)]="model.occupation" #occupation="ngModel" required/>
+		                            <div *ngIf="f.submitted && !occupation.valid" class="help-block">Occupation is required</div>
+		                        </div>
+					        </div>
+					        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+		                        <div class="col-md-12">
+		                            <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="model.username" #username="ngModel" required/>
+		                            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+		                        </div>
+					        </div>
+					        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+		                        <div class="col-md-12">
+		                            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="model.password" #password="ngModel" required/>
+		                            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+		                        </div>
+					        </div>
+					        <div class="form-group">
+		                        <div class="col-md-6">
+		                            <button [disabled]="loading" class="btn btn-info btn-block">Register</button>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <a [routerLink]="['/login']">Cancel</a>
+		                        </div>
+					        </div>
+					</form>
+                </div>
+                <div class="login-footer">
+                    <div class="pull-left">
+                        &copy; 2014 AppName
+                    </div>
+                    <div class="pull-right">
+                        <a href="#">About</a> |
+                        <a href="#">Privacy</a> |
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>

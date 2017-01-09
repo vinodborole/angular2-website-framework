@@ -1,0 +1,39 @@
+<!-- START PAGE SIDEBAR -->
+<div class="page-sidebar page-sidebar-fixed scroll mCustomScrollbar _mCS_1 mCS-autoHide" style="height: 394px;">
+    <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+    	<div id="mCSB_1_container" class="mCSB_container" style="position:fixed; top:0; left:0; width:220px" dir="ltr">
+<!-- START X-NAVIGATION -->
+   <ul class="x-navigation">
+       <li class="xn-logo">
+           <a [routerLink]="['profile']" href="#">{{currentUser.firstName}}</a>
+           <a href="#" class="x-navigation-control"></a>
+       </li>
+       <li class="xn-profile">
+           <a [routerLink]="['profile']" href="#" class="profile-mini" >
+               <img src="assets/images/users/avatar.jpg" alt="{{currentUser.firstName}}"/>
+           </a>
+           <div class="profile">
+               <div class="profile-image">
+               	<a [routerLink]="['profile']" href="#">
+                   	<img src="assets/images/users/avatar.jpg" alt="{{currentUser.firstName}}"/>
+                   </a>
+               </div>
+               <div class="profile-data">
+                   <div class="profile-data-name">{{currentUser.firstName}}</div>
+                   <div class="profile-data-title">{{currentUser.occupation}}</div>
+               </div>
+               <div class="profile-controls">
+               </div>
+           </div>                                                                        
+       </li>
+       <li class="xn-title">Navigation</li>
+       <li class="active">
+           <a [routerLink]="['dashboard']"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+       </li>      
+       
+   </ul>
+</div>
+</div>
+<!-- END X-NAVIGATION --> 
+</div>
+<!-- END PAGE SIDEBAR -->
